@@ -18,8 +18,8 @@ import com.google.firebase.firestore.FirebaseFirestore;
 public class ProfileActivity extends AppCompatActivity implements View.OnClickListener {
     private String user, name, city;
     private TextView nameView, cityView;
-    private Button logOut;
-    private Intent logInActivity;
+    private Button logOut, home;
+    private Intent logInActivity, feedActivity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,8 +29,10 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         cityView = findViewById(R.id.userCity);
         logOut = findViewById(R.id.logOutBtn);
         logOut.setOnClickListener(this);
-
+        home = findViewById(R.id.homeBtn);
+        home.setOnClickListener(this);
         logInActivity = new Intent(this, LoginActivity.class);
+        feedActivity = new Intent(this, ActivityFeed.class);
 
         user = FirebaseAuth.getInstance().getCurrentUser().getUid();
         FirebaseFirestore.getInstance()
@@ -55,6 +57,8 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             case (R.id.logOutBtn):
                 FirebaseAuth.getInstance().signOut();
                 startActivity(logInActivity);
+            case (R.id.homeBtn):
+                startActivity(feedActivity);
         }
     }
 }
