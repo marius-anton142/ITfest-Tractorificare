@@ -26,10 +26,11 @@ import java.util.Map;
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView goToLoginBtn;
-    private EditText nameInput, emailInput, passwordInput;
+    private EditText nameInput, emailInput, passwordInput, cityInput;
     private ProgressBar progressBar;
     private Button registerBtn;
     private FirebaseAuth mAuth;
+    private Intent profileActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,11 +44,14 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         nameInput = findViewById(R.id.nameReg);
         emailInput = findViewById(R.id.emailReg);
         passwordInput = findViewById(R.id.passwordReg);
+        cityInput = findViewById(R.id.cityReg);
 
         registerBtn = findViewById(R.id.registerBtn);
         registerBtn.setOnClickListener(this);
 
         progressBar = findViewById(R.id.progressBar);
+
+        profileActivity = new Intent(this, ProfileActivity.class);
     }
 
     @Override
@@ -67,6 +71,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         String name = nameInput.getText().toString().trim();
         String email = emailInput.getText().toString().trim();
         String password = passwordInput.getText().toString().trim();
+        String city = cityInput.getText().toString().trim();
 
         if (name.isEmpty()) {
             nameInput.setError("Name is required");
@@ -98,7 +103,14 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             return;
         }
 
+        if (city.isEmpty()) {
+            cityInput.setError("City is required");
+            passwordInput.requestFocus();
+            return;
+        }
+
         progressBar.setVisibility(View.VISIBLE);
+
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
@@ -107,7 +119,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                             Map<String, Object> user = new HashMap<>();
                             user.put("name", name);
                             user.put("email", email);
-
+                            user.put("city", city);
                             FirebaseFirestore.getInstance()
                                     .collection("Users")
                                     .document(FirebaseAuth.getInstance().getCurrentUser().getUid())
@@ -116,8 +128,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
-                                        Toast.makeText(RegisterActivity.this, "Registered", Toast.LENGTH_LONG).show();
-
+                                        startActivity(profileActivity);
                                     }
                                     else {
                                         Toast.makeText(RegisterActivity.this, "Failed", Toast.LENGTH_SHORT).show();
