@@ -20,11 +20,12 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView goToRegister;
+    private TextView goToRegister, forgotPassword;
     private EditText emailInput, passwordInput;
     private Button logInBtn;
     private ProgressBar progressBar;
     private FirebaseAuth mAuth;
+    private Intent profileActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_login);
         goToRegister = (TextView) findViewById(R.id.registerText);
         goToRegister.setOnClickListener(this);
+
+        forgotPassword = findViewById(R.id.forgotBtn);
+        forgotPassword.setOnClickListener(this);
 
         emailInput = findViewById(R.id.emailLog);
         passwordInput = findViewById(R.id.passwordLog);
@@ -42,6 +46,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         progressBar = findViewById(R.id.progressBar);
 
         mAuth = FirebaseAuth.getInstance();
+        profileActivity = new Intent(this, ProfileActivity.class);
     }
 
     @Override
@@ -52,6 +57,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.loginBtn:
                 userLogIn();
+                break;
+            case R.id.forgotBtn:
+                Toast.makeText(LoginActivity.this, "I dont give a fuck", Toast.LENGTH_SHORT).show();
                 break;
         }
     }
@@ -85,8 +93,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    Toast.makeText(LoginActivity.this, "Logged In", Toast.LENGTH_SHORT).show();
-                    //redirect
+                    startActivity(profileActivity);
                 }
                 else {
                     Toast.makeText(LoginActivity.this, "Bad email or password", Toast.LENGTH_SHORT).show();
