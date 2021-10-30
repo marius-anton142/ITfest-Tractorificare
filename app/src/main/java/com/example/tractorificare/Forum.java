@@ -43,7 +43,7 @@ public class Forum extends AppCompatActivity {
             mesajDeveloper.setText(mesajFinal);
             System.out.println("answer");
         }
-        else  if(mesajUser.equals("question") || mesajUser.equals("Question")){
+        else if(raspuns.equals("question") || raspuns.equals("Question")){
             mesajDeveloper.setText(mesajInceput);
             System.out.println("question");
 

@@ -1,3 +1,4 @@
 <resources>
+    <color name="darkOne">#17202A</color>
     <string name="app_name">Tractorificare</string>
 </resources>
