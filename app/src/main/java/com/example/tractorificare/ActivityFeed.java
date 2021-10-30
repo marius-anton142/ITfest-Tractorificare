@@ -15,10 +15,6 @@ public class ActivityFeed extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feed);
-        //FirebaseDatabase.getInstance("https://tractoristii-98bc8-default-rtdb.europe-west1.firebasedatabase.app")
-        //        .getReference("Tests")
-        //        .child("Test1")
-        //        .setValue(new test("a"));
     }
 
     public void infoClick00 (View view) {
@@ -37,7 +33,7 @@ public class ActivityFeed extends AppCompatActivity {
     public void imageClick00 (View view) {
         if (tap00 == false) {
             tap00 = true;
-            lerp00(320);
+            lerp00(260);
         } else {
             tap00 = false;
             lerp00(-130);
