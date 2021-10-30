@@ -3,13 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Claudiu/Desktop/hackathon/ITfest-Tractorificare/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.25052083333333336" />
+        <entry key="..\:/Users/Claudiu/Desktop/hackathon/ITfest-Tractorificare/app/src/main/res/drawable/ic_baseline_send_24.xml" value="0.25052083333333336" />
+        <entry key="..\:/Users/Claudiu/Desktop/hackathon/ITfest-Tractorificare/app/src/main/res/drawable/ic_launcher_background.xml" value="0.25052083333333336" />
         <entry key="..\:/Users/Claudiu/Desktop/hackathon/ITfest-Tractorificare/app/src/main/res/layout/activity_info00.xml" value="0.15416666666666667" />
         <entry key="..\:/Users/Claudiu/Desktop/hackathon/ITfest-Tractorificare/app/src/main/res/layout/activity_info01.xml" value="0.1" />
         <entry key="..\:/Users/Claudiu/Desktop/hackathon/ITfest-Tractorificare/app/src/main/res/layout/activity_info02.xml" value="0.14114583333333333" />
         <entry key="..\:/Users/Claudiu/Desktop/hackathon/ITfest-Tractorificare/app/src/main/res/layout/activity_login.xml" value="0.4" />
         <entry key="..\:/Users/Claudiu/Desktop/hackathon/ITfest-Tractorificare/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/Users/Claudiu/Desktop/hackathon/ITfest-Tractorificare/app/src/main/res/layout/activity_profile.xml" value="0.264" />
+        <entry key="..\:/Users/Claudiu/Desktop/hackathon/ITfest-Tractorificare/app/src/main/res/layout/activity_profile.xml" value="0.176" />
         <entry key="..\:/Users/Claudiu/Desktop/hackathon/ITfest-Tractorificare/app/src/main/res/layout/activity_register.xml" value="0.4" />
+        <entry key="..\:/Users/Claudiu/Desktop/hackathon/ITfest-Tractorificare/app/src/main/res/layout/forum.xml" value="0.1" />
       </map>
     </option>
   </component>
