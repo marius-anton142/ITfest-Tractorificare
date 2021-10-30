@@ -103,7 +103,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                             User user = new User(name, email);
 
                             FirebaseDatabase.getInstance("https://tractoristii-98bc8-default-rtdb.europe-west1.firebasedatabase.app")
-                                    .getReference("Posts")
+                                    .getReference("Users")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                     .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
