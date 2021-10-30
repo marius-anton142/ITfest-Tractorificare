@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "366685315351",
+    "firebase_url": "https://tractoristii-98bc8-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "tractoristii-98bc8",
+    "storage_bucket": "tractoristii-98bc8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:366685315351:android:ae8513b9ce79c350bc1752",
+        "android_client_info": {
+          "package_name": "com.example.tractorificare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "366685315351-ngmbh0f17cq4v3iqj87u28h84u9dint5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5qQSiW6v3kWcP_oDDUxqZgbnKbcFBgMI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "366685315351-ngmbh0f17cq4v3iqj87u28h84u9dint5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:366685315351:android:b5890d96ab3cffc6bc1752",
+        "android_client_info": {
+          "package_name": "com.exemple.tractorificare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "366685315351-ngmbh0f17cq4v3iqj87u28h84u9dint5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5qQSiW6v3kWcP_oDDUxqZgbnKbcFBgMI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "366685315351-ngmbh0f17cq4v3iqj87u28h84u9dint5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
