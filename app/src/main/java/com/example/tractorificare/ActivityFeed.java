@@ -7,17 +7,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 
-import com.google.firebase.database.FirebaseDatabase;
-
-public class MainActivity extends AppCompatActivity {
+public class ActivityFeed extends AppCompatActivity {
     public boolean tap00 = false, tap01 = false, tap02 = false, lerp01, lerp02, lerp00;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_feed);
         //FirebaseDatabase.getInstance("https://tractoristii-98bc8-default-rtdb.europe-west1.firebasedatabase.app")
         //        .getReference("Tests")
         //        .child("Test1")

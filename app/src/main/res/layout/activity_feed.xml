@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:background="@color/darkOne"
         android:padding="10dp"
-        tools:context=".MainActivity">
+        tools:context=".ActivityFeed">
 
         <ImageView
             android:id="@+id/imgB01"
